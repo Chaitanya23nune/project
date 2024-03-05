@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Twitter Sentiment Analysis Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #008cba;
+        }
+        h2 {
+            margin-top: 40px;
+            color: #008cba;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .summary {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .image-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>Twitter Sentiment Analysis Result</h1>
+
+    <div class="summary">
+        <h2>Sentiment Analysis Summary:</h2>
+        <p>{{ positive_percentage }}</p>
+        <p>{{ negative_percentage }}</p>
+    </div>
+
+    <div class="image-container">
+        <h2>Word Cloud:</h2>
+        <img src="data:image/png;base64,{{ img_base64 }}" alt="Word Cloud">
+
+        <h2>Positive vs. Negative Comments:</h2>
+        <img src="data:image/png;base64,{{ img_base64plot }}" alt="Positive vs. Negative Comments">
+    </div>
+    <form action="/" method="get">
+        <button type="submit">Home</button>
+    </form>
+</div>
+</body>
+</html>

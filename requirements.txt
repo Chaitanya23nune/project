@@ -1,0 +1,10 @@
+flask
+pandas
+numpy
+selenium
+chromedriver
+chromedriver_binary
+transformers
+googletrans
+wordcloud
+matplotlib
